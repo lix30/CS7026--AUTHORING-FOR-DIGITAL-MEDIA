@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1ea;
+}
+
+/* Header */
+header {
+    background-color: #f4f1ea;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.button a {
+    text-decoration: none;
+    color: black;
+    background: #d4a373;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Main Sections */
+main section {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.story, .characters {
+    background-color: #a58c61;
+    padding: 20px;
+    color: white;
+}
+
+.facts {
+    background-color: #c47f6d;
+    padding: 20px;
+    color: white;
+}
+
+/* Floor Guide */
+.floor-guide {
+    background-color: #f4f1ea;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Restaurants */
+.nearby-food {
+    text-align: center;
+    padding: 40px;
+}
+
+.restaurant {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Booking */
+.booking {
+    background-color: #a64e40;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.booking button {
+    background-color: white;
+    color: #a64e40;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.socials img {
+    width: 40px;
+    margin: 5px;
+}
