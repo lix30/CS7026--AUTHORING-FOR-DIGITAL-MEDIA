@@ -1,0 +1,658 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Headings (h1, h2, h3, etc.) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Besley', serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 4rem);
+    margin-bottom: 10px;
+}
+
+a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Paragraphs */
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(1rem, 1vw, 2rem);
+    margin-bottom: 10px;
+}
+
+
+ /* --- Overlay Menu -------------- */
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: #f0e8db;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+    padding: 60px 30px;
+    transition: right 0.3s ease-in-out;
+    z-index: 9999;
+}
+  
+.overlay-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 60px;
+}
+  
+.overlay-menu ul li {
+    margin-bottom: 20px;
+}
+  
+.overlay-menu ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #3c2f20;
+    transition: color 0.2s;
+}
+  
+.overlay-menu ul li a:hover {
+    color: #a64e40;
+}
+  
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* --- Navigation Top Bar ----------------- */
+.top-nav {
+    position: fixed; /* Makes it stick to the top */
+    top: 20px;
+    left: 30px; /* Space from the left */
+    right: 30px; /* Space from the right */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* Ensures it's above other content */
+    transition: transform 0.3s ease-in-out; /* Smooth hide/show effect */
+}
+
+  
+.hamburger {
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #000000;
+    display: block;
+    line-height: 1;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-family: 'Besley', serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+}
+
+/* --- Back Top Button ----------------- */
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: #a64e40;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: background 0.3s;
+  }
+  
+  #backToTop:hover {
+    background-color: #84392f;
+  }
+
+/* --- Hero section ----------------------------------------------------*/
+/* Audio Guide */
+
+#audioPlayer {
+    display: none;
+    width: 100%; /* Makes sure it fits the container */
+    max-width: 400px; /* Limits width for better layout */
+    margin-top: 10px; /* Space below button */
+}
+
+
+
+/* Hero Section */
+.hero {
+    padding-top: 100px;
+    display: flex;
+    height: 100vh; /* Full screen height */
+    position: relative;
+
+}
+
+/* Left Content */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    width: 50%; /* Takes half the screen */
+    text-align: center;
+    padding: 20px;
+    z-index: 2; /* Keeps it above the image */
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem); /* Minimum 3rem, scales with 6% of viewport width, max 6rem */
+    color: #2B2A29;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: clamp(1.5rem, 3vw, 3rem); /* Minimum 1.5rem, scales with 3% of viewport width, max 3rem */
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #444;
+}
+.audio-button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block; /* Ensures it's on a new line */
+    margin-bottom: 10px; /* Adds spacing below the button */
+}
+
+/* Right Image */
+.hero-image {
+    position: absolute;
+    right: 0;
+    bottom: 0; /* Moves it to the bottom */
+    width: 50%;
+    height: 90%; /* Full height of the section */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the whole area */
+    border-top-left-radius: 50vh;
+}
+
+/* Decorative Circles */
+.decor-circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.circle1 {
+    width: 40px;
+    height: 40px;
+    top: 10%;
+    left: -20px;
+    background-color: #4A3228;
+}
+
+.circle2 {
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 10%;
+    background-color: #B76E60;
+}
+
+.circle3 {
+    width: 30px;
+    height: 30px;
+    bottom: 10%;
+    left: -15px;
+    background-color: #A88B5D;
+}
+
+.circle4 {
+    width: 50px;
+    height: 50px;
+    top: 10%;
+    left: 10%;
+    background-color: #4A3228;
+}
+
+.circle5 {
+    width: 30px;
+    height: 30px;
+    top: 40%;
+    left: 5%;
+    background-color: #B76E60;
+}
+
+.circle6 {
+    width: 20px;
+    height: 20px;
+    top: 70%;
+    left: 15%;
+    background-color: #A88B5D;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-content {
+        width: 100%;
+        height: 50vh; /* Gives enough space on mobile */
+        z-index: 2;
+        order: 1; /* Content appears first */
+    }
+
+    .hero-image {
+        margin-top: 0;
+        width: 100%;
+        height: 50vh;
+        position: relative;
+        order: 2; /* Image appears below content */
+    }
+}
+
+/*-------------------Story Section-------------------------------*/
+.story {
+    display: flex;
+    height: 100vh; /* Full screen height */
+}
+
+/* Left Image */
+.story-image {
+    width: 50%;
+    height: 100%;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the space */
+}
+
+/* Right Content */
+.story-content {
+    width: 50%;
+    background-color: #A28351; /* Adjust color to match design */
+    color: #fff; /* White text for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7%;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .story {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .story-image {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .story-content {
+        width: 100%;
+        text-align: left;
+        min-height: 50vh;
+    }
+}
+
+/* Characters Section-------------------------- */
+.characters {
+    display: flex;
+    height: 100vh; /* Full screen height */
+    flex-direction: row-reverse; /* Image on the right */
+}
+
+/* Left Content */
+.characters-content {
+    width: 50%;
+    background-color: #A28351; /* Adjust color to match design */
+    color: #fff; /* White text for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7%;
+}
+
+
+/* Right Image */
+.characters-image {
+    width: 50%;
+    height: 100%;
+}
+
+.characters-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the space */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .characters {
+        flex-direction: column; /* Stack items */
+        height: auto;
+    }
+
+    .characters-image {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .characters-content {
+        width: 100%;
+        text-align: left;
+        min-height: 50vh;
+    }
+}
+
+/* --- Fact Section ------------------------- */
+#facts {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f1e6; /* Website background */
+}
+
+.fact-container {
+    position: relative;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---Fact Card--- */
+.fact-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #b45342; /* Red background */
+    border-radius: 20px; /* Rounded edges */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    box-sizing: border-box;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.fact-text {
+    width: 45%;
+    color: white;
+}
+
+.fact-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.fact-image img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* --- Mobile View (Center Text Below Image) --- */
+@media (max-width: 768px) {
+    .fact-card {
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .fact-text {
+        width: 90%;
+    }
+
+    .fact-image {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .fact-image img {
+        width: 100%;
+        max-height: 50vh;
+    }
+}
+
+/* --- Navigation Buttons (Appear on Hover) --- */
+.fact-btn-wrapper {
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    transition: opacity 0.3s;
+}
+
+.fact-btn-wrapper.left {
+    left: 0;
+}
+
+.fact-btn-wrapper.right {
+    right: 0;
+}
+
+.fact-btn-wrapper:hover .fact-btn {
+    opacity: 1;
+}
+
+.fact-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    opacity: 0; /* Initially hidden */
+}
+
+/* Info Section*/
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px; /* Space between image and text */
+    padding: 50px;
+}
+
+.info-image {
+    flex: 1; /* Allows it to take up the needed space */
+    max-width: 50%; /* Ensures it doesn’t get too large */
+}
+
+.info-image img {
+    width: 100%; /* Ensures the image stays fully visible */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Prevents extra spacing issues */
+    border-radius: 20px
+}
+
+.info-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+
+/* 📱 Responsive Styles */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .info-image,
+    .info-text {
+        max-width: 100%;
+    }
+}
+
+/* video */
+.video-section {
+    display: flex;
+    /* align-items: center;  */
+    justify-content: space-between; 
+    width: 80%; 
+    margin: 5vw auto;
+}
+
+.video-section h2 {
+    flex: 1; 
+    font-size: 24px; 
+    text-align: left; 
+    padding-right: 20px;
+}
+
+.video-section p {
+    flex: 1; 
+    font-size: 14px; 
+    text-align: left; 
+}
+
+.building-video {
+    flex: 2;
+    margin-left: 20px;
+    max-width: 60%;
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* food */
+.food-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 60px; 
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    padding: 20px;
+    width: 280px;           
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  }
+  .card img {
+    width: 100%;
+    height: 200px;        
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+  }
+  
+  .card h4 {
+    margin: 0;
+    font-size: 1rem;      
+    text-align: center;
+  }
+
+  /* Booking */
+  .booking-section {
+    background-color: #a64e40;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .booking-section button {
+    background: white;
+    color: #a64e40;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .booking-section button:hover {
+    background: #f3f3f3;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 40px 20px;
+    background-color: #2c2c2c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-left h2 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-nav a {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .socials img {
+    width: 30px;
+    margin-right: 10px;
+  }
+

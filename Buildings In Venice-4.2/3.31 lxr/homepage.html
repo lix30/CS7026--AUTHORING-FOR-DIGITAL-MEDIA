@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storica - Guide to Venice Buildings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="overlayMenu" class="overlay-menu">
+        <span class="close-btn" id="closeMenu">&times;</span>
+        <ul>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="buildings1.html">Doge’s Palace</a></li>
+          <li><a href="buildings2.html">Ca' d'Oro</a></li>
+          <li><a href="../Diana Buildings Page/marciana-library.html">Marciana Library</a></li>
+          <li><a href="buildings4.html">St Mark's Basilica</a></li>
+        </ul>
+    </div>
+    
+    <header>
+        <section class="hero">
+            <nav>
+                <div class="logo">Storica</div>
+                <div class="hamburger" id="hamburger">&#9776;</div>
+            </nav>
+            <img src="./assets/guide_image.png" alt="Guide to Venice" class="hero-image">
+            <div class="hero-text">
+                <h1>Your Guide to the Buildings of Venice</h1>
+            </div>
+        </div>
+        <!-- <div class="dots-container"> -->
+            <div class="dot" id="dot1" data-name="Ca' d'Oro"></div>
+            <div class="dot" id="dot2" data-name="Marciana Library"></div>
+            <div class="dot" id="dot3" data-name="Doge's Palace"></div>
+            <div class="dot" id="dot4" data-name="Saint Mark's Basilica"></div>
+        <!-- </div> -->
+        </section>
+    </header>
+    
+    <main>
+        <section class="buildings">
+            <div class="card">
+                <a href="buildings1.html">
+                    <img src="./assets/B1.png" alt="Saint Mark’s Basilica">
+                </a>
+                <h3>Doge's Palace</h3>
+                <p>The Doge's Palace, or Palazzo Ducale, is a renowned Gothic architectural masterpiece in Venice, Italy. Historically, it served as the residence of the Doge—the chief magistrate—and the seat of the Venetian government ​
+                </p>
+            </div>
+            
+            <div class="card">
+                <a href="buildings2.html">
+                    <img src="./assets/BrownBlueDeskGlobe.png" alt="Saint Mark’s Basilica Interior">
+                </a>
+                <h3>Ca' d'Oro</h3>
+                <p>Ca' d'Oro, or "Golden House," is a Venetian Gothic palace on the Grand Canal in Venice, Italy. Built in the 15th century, it is renowned for its intricate façade and was once adorned with gold. Today, it houses the Galleria Giorgio Franchetti, showcasing art and sculptures</p>
+            </div>
+
+            <div class="card">
+                <a href="buildings3.html">
+                    <img src="./assets/GoldWhiteConcreteBuilding3.png" alt="Saint Mark’s Basilica">
+                </a>
+                <h3>Marciana Library</h3>
+                <p>The Marciana Library, or Biblioteca Nazionale Marciana, is a historic library in Venice, Italy, housing rare manuscripts and classical texts. Designed by Jacopo Sansovino in the 16th century, it is an architectural masterpiece of the Venetian Renaissance, located in Piazza San Marco</p>
+            </div>
+
+            <div class="card">
+                <a href="buildings4.html">
+                    <img src="./assets/B4.png" alt="Saint Mark's Basilica">
+                </a>
+                <h3>Saint Mark's Basilica</h3>
+                <p>Saint Mark's Basilica (Basilica di San Marco) is a stunning cathedral in Venice, Italy, known for its Byzantine architecture and ornate mosaics. Completed in the 11th century, it was originally built to house the relics of Saint Mark</p>
+            </div>
+        </section>
+        <!-- <div class="video-section">
+            <h2>Experience the Beauty of Venice</h2>
+            <video controls autoplay muted loop class="building-video">
+                <source src="B3.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div> -->
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+             <div class="about">
+                <h2>Storica</h2>
+                <p>Your personal tour guide, live and experience the stories of Venice without hassle</p>
+            </div>
+            <!-- <nav>
+                <a href="homepage.html">Home</a>
+                <a href="buildings1.html">Doge’s Palace</a>
+                <a href="buildings2.html">Ca' d'Oro</a>
+                <a href="buildings3.html">Marciana Library</a>
+                <a href="buildings4.html">St Mark's Basilica</a>
+            </nav> -->
+            <div class="social-media">
+                <h3>Tag on Us</h3>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="./assets/tags/Twitter.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="./assets/tags/Instagram.png" alt="Instagram">
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="./assets/tags/facebook.png" alt="Facebook">
+                </a>
+            </div>
+
+    </div>
+        </div>
+    </footer>
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to Top">↑</button>
+
+
+    <!-- 引入 JavaScript -->
+    <script src="homepage.js"></script>
+    <script>
+        // 显示或隐藏按钮
+        window.onscroll = () => {
+          const btn = document.getElementById("backToTop");
+          if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "block";
+          } else {
+            btn.style.display = "none";
+          }
+        };
+      
+        // 点击返回顶部
+        document.getElementById("backToTop").addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        });
+      </script>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const overlayMenu = document.getElementById("overlayMenu");
+    const closeMenu = document.getElementById("closeMenu");
+
+    hamburger.addEventListener("click", () => {
+    overlayMenu.style.right = "0";
+    });
+
+    closeMenu.addEventListener("click", () => {
+    overlayMenu.style.right = "-100%";
+    });
+
+
+
+
+  </script>
+      
+</body>
+</html>
